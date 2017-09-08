@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-ims",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-ims",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "An Cordova Plugin to catch InputMethodService events"
+}

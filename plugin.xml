@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="ims-cordova-plugin"
+    version="1.0.0">
+    <name>Cordova IMS Plugin</name>
+    <description>And IMS event listener by Oscoweb - http://www.oscoweb.com</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/OBout/IMSCordova.git</repo>
+    <issue>https://github.com/OBout/IMSCordova/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.IMSCordovaPlugin -->
+        <clobbers target="IMSCordovaPlugin" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="IMSCordovaPlugin">
+          <param name="android-package" value="com.IMSCordovaPlugin" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/IMSCordovaPlugin.java" target-dir="src/com/" />
+    </platform>
+
+    <!-- ios -->
+    <!-- <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="IMSCordovaPlugin" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="IMSCordovaPlugin">
+                <param name="ios-package" value="IMSCordovaPlugin" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/IMSCordovaPlugin.h" />
+        <source-file src="src/ios/IMSCordovaPlugin.m" />
+    </platform> -->
+</plugin>
